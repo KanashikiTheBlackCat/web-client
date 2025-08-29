@@ -4,20 +4,21 @@
 </head>
 <body>
 <script>
-w = window.open("https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?test=1", "w-popup");
+onclick = () => {
+  w = window.open("https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?test=1", "w-popup");
     
-setTimeout(() => {
-  x = w.window.open("https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?test=2", "x-popup");
-}, 1000);
+  setTimeout(() => {
+    x = w.window.open("https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?test=2", "x-popup");
+  }, 1000);
 
-setTimeout(() => {
-  w.location = "https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?test=3-w-pop", "w-popup";
-}, 2000);
+  setTimeout(() => {
+    w.location = "https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?test=3-w-pop", "w-popup";
+  }, 2000);
 
-setTimeout(() => {
-  x.location = "https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?test=4-x-pop", "x-popup";
-}, 3000);
-
+  setTimeout(() => {
+    x.location = "https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35/?test=4-x-pop", "x-popup";
+  }, 3000);
+};
 </script>
 </body>
 </html>
