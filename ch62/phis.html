@@ -4,19 +4,7 @@
 </head>
 <body>
 <script>
-fetch("https://web-client-ch6.challenge01.root-me.org:58006/login" , {
-            method: "POST",
-            headers: {
-            "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                "username":"blabla",
-                "secret":"bloblo"
-            })
-        }).then(() => {
-            location = "https://web-client-ch6.challenge01.root-me.org:58006/profile";
-        })
-}
+fetch("https://web-client-ch6.challenge01.root-me.org:58006/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({"username":"blabla","secret":"bloblo"})})
 </script>
 </body>
 </html>
