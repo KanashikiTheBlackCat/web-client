@@ -3,8 +3,30 @@
 <head>
 </head>
 <body>
+<form id="loginForm">
+  <input id="username" class="mgb-1" name="username" value="username"/>
+  <input id="secret" class="mgb-1" name="secret" value="bbbbaaaa"/>
+  <button class="mgb-1" id="clickbtn" type="submit">Login</button>
+</form>
+
 <script>
-fetch("https://web-client-ch6.challenge01.root-me.org:58006/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({"username":"blabla","secret":"bloblo"})})
+document.getElementById("loginForm").addEventListener("submit", async function(e) {
+  e.preventDefault(); // empêche l'envoi natif du formulaire
+
+  const username = document.getElementById("username").value;
+  const secret = document.getElementById("secret").value;
+
+  const response = await fetch("https://web-client-ch6.challenge01.root-me.org:58006/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ username, secret })
+  });
+
+  const data = await response.text(); // ou response.json() si la réponse est JSON
+  console.log("Réponse serveur :", data);
+});
 </script>
 </body>
 </html>
